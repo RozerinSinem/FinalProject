@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}"> 
+    <title>Üye Ol</title>
+</head>
+<body>
+    <h1>Üye Ol</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <label for="{{ form.name.id }}">İsim:</label>
+        {{ form.name() }}
+        <br>
+        <label for="{{ form.surname.id }}">Soyisim:</label>
+        {{ form.surname() }}
+        <br>
+        <label for="{{ form.email.id }}">Email:</label>
+        {{ form.email() }}
+        <br>
+        <label for="{{ form.password.id }}">Şifre:</label>
+        {{ form.password() }}
+        <br>
+        <label for="{{ form.confirm_password.id }}">tekrar şifre:</label>
+        {{ form.confirm_password() }}
+        <br>
+        <label for="{{ form.country.id }}">Ülke:</label>
+        {{ form.country() }}
+        <br>
+        <label for="{{ form.city.id }}">Şehir:</label>
+        {{ form.city() }}
+        <br>
+        {{ form.submit(text="Üye Ol") }}
+    </form>
+</body>
+</html>

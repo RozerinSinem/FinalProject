@@ -1,0 +1,271 @@
+.navbar-inverse {
+    background-color: #43124d;
+    border-color: #b84bce;
+}
+
+
+.navbar {
+    border-radius: 0; 
+}
+
+
+.navbar.navbar-inverse .navbar-brand {
+    color: white; 
+    font-weight: 600;
+    font-size: 26px;
+}
+
+
+.navbar.navbar-inverse .navbar-right {
+    margin-right: 0;
+}
+
+
+.navbar.navbar-inverse .navbar-right li a {
+    color: white;
+    margin-right:20px;
+    font-size:large;
+    font-weight: bold;
+}
+
+.navbar.navbar-inverse .navbar-right .glyphicon-log-in {
+    margin-left: 30px; 
+}
+.panel {
+    background-color: rgb(195, 120, 194);
+    height: 100px; 
+    margin-top:-20px;
+}
+
+
+.panel1{
+    background-color: #4a034e;
+    height: 70px;
+    margin-top:-90px;
+}
+
+
+
+.vertical-line {
+    display: inline-block;
+    width: 2px; 
+    height: 40px; 
+    background-color: #000000; 
+    margin-right: 5px; 
+    margin-left: 18px;
+    margin-top:10px;
+}
+
+.vertical-line2 {
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    background-color: #000000;
+    margin-right: 5px;
+    margin-left: 18px;
+    position: relative;
+    top: -65px; 
+}
+
+.vertical-line3 {
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    background-color: #000000;
+    margin-right: 5px;
+    margin-left: 18px;
+    position: relative;
+    top: -110px; 
+}
+
+.vertical-line4 {
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    background-color: #000000;
+    margin-right: 5px;
+    margin-left: 18px;
+    position: relative;
+    top: -168px; 
+}
+
+.text1 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:6px;
+    font-size: 12px;
+    margin-left:-1px;
+    color: rgb(255, 255, 255);
+}
+.text2 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:-32px;
+    margin-left:28px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.text3 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:-35px;
+    margin-left:30px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.text4 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:-65px;
+    margin-left:-3px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.text5 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:-90px;
+    margin-left:330px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.text6 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:-110px;
+    margin-left:-2px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.text7 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:-148px;
+    margin-left:635px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.text8{
+    display: inline-block;
+    vertical-align: top; 
+    margin-top:-212px;
+    margin-left:950px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+
+.text-box {
+    display: inline-block;
+    vertical-align: top; 
+    margin-left: 20px; 
+    margin-top:-70px;
+    border-color: rgb(0, 0, 0);
+}
+
+.text-box2 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-left: 20px; 
+    margin-top:-170px;
+    border-color: rgb(0, 0, 0);
+}
+
+.text-box select[id="pickupOffice"] {
+    height: 45px !important; 
+    width: 225px;
+}
+
+.text-box2 select[id="returnOffice"] {
+    height: 45px !important; 
+    width: 225px;
+}
+
+.date-input {
+    position: relative;
+    top: -125px;
+    margin-left:10px;
+    height: 45px;
+}
+
+.date-input2 {
+    position: relative;
+    top: -235px;
+    margin-left:10px;
+    height: 45px;
+}
+
+.button {
+    position: relative;
+    top: -184px;
+    background-color: #b84bce;
+    color:white;
+    border-color: black;
+    width: 100px;
+    height: 35px;
+    margin-left: 1100px;
+    border-radius: 5px;
+}
+
+.button-text{
+    font-size: 10px;
+}
+
+.map-container {
+    
+    padding-top: 56.25%; 
+    margin-top: -800px;
+    margin-left: 590px;
+   
+}
+
+.office-panel {
+    background-color: rgb(255, 255, 255);
+    height: 360px; 
+    margin-top:-150px;
+    border-color: #b84bce;
+    border-radius: 5px;
+}
+
+.office-text{
+    font-weight: bold;
+    margin-left: 18px;
+    
+}
+
+.office-header{
+    margin-top: -250px;
+}
+
+.office-text2 {
+    margin-top: 30px;
+    margin-left:30px;
+    font-weight: bold; 
+    color: #030303;
+}
+
+.office-info{
+    margin-left:80px;
+    margin-top: 40px;
+}
+
+.marker-icon {
+    font-size: 20px; 
+    margin-left: 30px; 
+    color: #b84bce;
+}
+.car-icon {
+    font-size: 20px; 
+    margin-left: 10px; 
+    color: #b84bce;
+}
+.additional-panel {
+    background-color: #b84bce;
+    height: 100px; 
+}

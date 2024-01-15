@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}"> 
+</head>
+<body>
+    <div class="login-container">
+        <h1>Giriş Yap</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <label for="{{ form.email.id }}">Email:</label>
+            {{ form.email() }}
+            <br>
+            <label for="{{ form.password.id }}">Şifre:</label>
+            {{ form.password() }}
+            <br>
+            {{ form.submit(text="Giriş Yap") }}
+        </form>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Üye Ol</a></p>
+    </div>
+</body>
+</html>

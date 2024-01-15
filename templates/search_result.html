@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arama Sonuçları</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='search_result.css') }}">
+</head>
+
+<body>
+   <nav>
+        <span class="bold">{{ start_date }}</span>
+        <span>&gt;</span>
+        <span class="bold">{{ end_date }}</span>
+        <br>
+        <span id="office" class="small">{{ office_name }}</span>
+    </nav>
+    <form id="filterForm">
+        <label for="brandFilter">Araç Tipi:</label>
+        <select id="brandFilter">
+            <option value="">Hepsi</option>
+            {% for brand in unique_brands %}
+                <option value="{{ brand }}">{{ brand }}</option>
+            {% endfor %}
+        </select>
+    
+        <label for="transmissionFilter"> Şanzıman Tipi:</label>
+        <select id="transmissionFilter">
+            <option value="">Hepsi</option>
+            <option value="Otomatik">Otomatik</option>
+            <option value="Manuel">Manuel</option>
+        </select>
+    
+        <label for="priceOrder"> Sırala:</label>
+        <select id="priceOrder" value="{{ default_price_order }}">
+            <option value="random">Rastgele</option>
+            <option value="asc">En Düşük Fiyat</option>
+            <option value="desc">En Yüksek Fiyat</option>
+        </select>
+    
+        <button type="button" onclick="applyFilters()">Uygula</button>
+    </form>
+    
+    <div class="vehicle-container">
+        {% for vehicle in vehicles %}
+        <div class="vehicle-card">
+           <h5 class="redtext">Ekonomik</h5>
+           <h5 class="redtext2">Tüm özellikler/kiralama şartları</h5>
+            <div class="vehicle-name">{{ vehicle.name }}</div>
+           
+            <div class="vehicle-details">
+                <div><strong>Yakıt Tipi:</strong> {{ vehicle.fuelType }}</div>
+                <div><strong>Şanzıman:</strong> {{ vehicle.transmission }}</div>
+                <div><strong>Depozito:</strong> {{ vehicle.deposit }}</div>
+                <div><strong>kilometresi:</strong> {{ vehicle.mileage }}</div>
+                <div><strong>Araç yaşı:</strong> {{ vehicle.age }}</div>
+            </div>
+            <div class="vehicle-image">
+                <img src="{{ url_for('static', filename=vehicle.picture) }}" alt="{{ vehicle.name }}">
+            </div>
+            <div class="vehicle-price">
+                <div> {{ vehicle.cost  * days_difference}}<strong>₺</strong></div>
+                <button class="pay-now-button">Hemen Öde > </button>
+            </div>
+            <div class="vehicle-cost"> {{ vehicle.cost}} / Günlük <strong>₺</strong></div>
+        </div>
+        {% endfor %}
+    </div>
+
+<script>
+    function applyFilters() {
+       
+        var brand = document.getElementById('brandFilter').value;
+        var transmission = document.getElementById('transmissionFilter').value;
+        var priceOrder = document.getElementById('priceOrder').value;
+        var url = `/search_result?start={{ start_date }}&end={{ end_date }}&office={{ office_name }}&brand=${brand}&transmission=${transmission}&order=${priceOrder}&timestamp=${new Date().getTime()}`;
+        window.location.href = url;
+    }
+    document.getElementById('priceOrder').value = "{{ default_price_order }}";
+</script>
+
+    
+
+</body>
+
+</html>
